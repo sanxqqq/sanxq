@@ -1,0 +1,194 @@
+ #include<string.h>
+#include<iostream>
+using  namespace std;
+
+#define konser
+const int pokok = 500000;
+struct merch{
+	string warna;
+};
+
+int main(){
+	merch kaos;
+	int tiket, nominal, harga, merch, c, a = 0;
+	char jtiket[25], jmerch[25], x;
+	float l, bayar, kembali,p;
+	int arr[3] = {3};
+	
+	pilihan:
+		cout<<"= KONSER ARCTIC MONKEYS ASIAN TOUR 2023 ="<<endl;
+		cout<<"========================================="<<endl;
+		cout<<"Jenis Tiket  : "<<endl;
+		cout<<"========================================="<<endl;
+		cout<<"\t1.VVIP			="<<endl;
+		cout<<"\t2.VIP			="<<endl;
+		cout<<"\t3.Reguler		="<<endl;
+		cout<<"========================================="<<endl;
+		cout<<"Pilih tiket :	"; cin >>tiket;
+		cout<<endl;
+		cout<<"-----------------------------------------"<<endl;
+		cout<<"BANYAK TIKET		:	"; cin>>l;
+		{
+			string peringatan [6] =
+			{"		INGAT		",
+			"KAMIS, 18 MARET 2023 mulai pukul 21.00 WIB - SELESAI",
+			"Dilarang membawa senjata tajam",
+			"Dilarang membawa minuman keras",
+			"Dilarang membawa alat perekam Profesional",
+			"Dilarang melempar sesuatu kepada personil band saat konser"};
+			
+			for(char i=0;i<5;i++){
+				cout << peringatan[i]<<endl;
+				}
+				
+		}
+		
+		
+		if(tiket==1){
+			strcpy(jtiket, "VVIP");
+			nominal=500000;
+			harga=1*nominal;
+		}
+		else if(tiket==2){
+			strcpy(jtiket,"VIP");
+			nominal=250000;
+			harga=1*nominal;
+		}
+		else if (tiket==3){
+			strcpy(jtiket,"Reguler");
+			nominal=100000;
+			harga=1*nominal;
+			
+		}
+		else {
+			strcpy(jtiket,"TIDAK ADA JENIS TIKET TERSEBUT");
+			nominal=0;
+			harga=0;
+		}
+		cout<<"============================================="<<endl;
+		cout<<"Jenis Tiket								   :"<<jtiket<<endl;
+		cout<<"Banyak Tiket								   :"<<1<<endl;
+		cout<<"Harga									   :"<<harga<<endl;
+		cout<<"============================================:"<<endl;
+		cout<<"Total Bayar								: Rp. ";cin>>bayar;
+		kembali=bayar-harga;
+		cout<<"Kembalian								: Rp. "<<kembali<<endl;
+		cout<<"============================================:"<<endl;
+		cout<<"APAKAH INGIN MEMBELI MERCHANDISE ARCTIC MONKEYS ?   :"<<endl;
+		cout<<endl;
+			
+		
+		cout<<"KETIK Y UNTUK IYA DAN T UNTUK TIDAK (Y atau  T) : ";cin>>x;
+		if(x=='Y'||x=='y'){
+			goto pilihan2;
+		}
+		else if(x=='T'||x=='t')
+		
+		
+		pilihan2:
+		
+		cout<<"=	MERCHANDISE ARCTIC MONKEYS 2023	="<<endl;
+		cout<<" 1. KAOS BAND ARCTIC MONKEYS	"<<endl;
+		cout<<" 2. Vinly Album The Car" <<endl;
+		cout<<" 3. Guitar Listrik Limited Edition Yamaha X Arctic Monkeys" << endl;
+		cout<<" 4. Sticker Pack Arctic Monkeys"<<endl;
+		cout<<" 5. Vans Old School x Arctic Monkeys"<<endl;
+		cout<<"========================================="<<endl;
+		cout<<"Pilih MERCHANDISE YANG INGIN DI BELI :	";cin>>merch;
+		cout<<"-----------------------------------------"<<endl;
+		cout<<"BERAPA BANYAK YANG MAU DI BELI		:	"; cin>>p;
+		
+		
+		 
+		 if(merch==1){
+			strcpy(jmerch, "KAOS BAND ARCTIC MONKEYS");
+			nominal=500000;
+			harga=1*nominal;
+		}
+		else if(merch==2){
+			strcpy(jmerch,"Vinly Album The Car");
+			nominal=250000;
+			harga=1*nominal;
+		}
+		else if (merch==3){
+			strcpy(jmerch,"Guitar Listrik Limited Edition Yamaha X Arctic Monkeys");
+			nominal=100000;
+			harga=1*nominal;
+			
+		}
+		
+		else if(merch==4){
+			strcpy(jmerch,"Sticker Pack Arctic Monkeys");
+			nominal=250000;
+			harga=1*nominal;
+		}
+		else if (merch==5){
+			strcpy(jmerch,"Vans Old School x Arctic Monkeys");
+			nominal=100000;
+			harga=1*nominal;
+			
+		}
+		
+			else {
+			strcpy(jmerch,"KODE YANG ANDA INPUT SALAH");
+			nominal=0;
+			harga=0;
+}
+
+		cout<<"============================================="<<endl;
+		cout<<"Jenis Merch								   :"<<jmerch<<endl;
+		cout<<"Banyak Merch								   :"<<1<<endl;
+		cout<<"Harga									   :"<<harga<<endl;
+		cout<<"============================================:"<<endl;
+		cout<<"Total Bayar								: Rp. ";cin>>bayar;
+		kembali=bayar-harga;
+		cout<<"Kembalian								: Rp. "<<kembali<<endl;
+		cout<<"============================================:"<<endl;
+		cout<<"TERIMA KASIH SUDAH MEMBELI MERCH ARCTIC MONKEYS NYAA, APA ADA LAGI ?   :"<<endl;
+		cout<<endl;
+		
+		cout<<"KEMBALI KE MENU AWAL (Y atau  T) : ";cin>>x;
+		if(x=='Y'||x=='y'){
+				goto pilihan;
+			}
+		       else if(x=='T'||x=='t')
+
+		cout<<"==========EITS SEPERTINYA ANDA BERUTUNG, KAMI ADA TEBAK TEBAKAN NIH BUAT KAMU YANG MENANG DAPET HADIAH LOHH============="<<endl;
+				cout<<"MAU IKUTAN GAK ? (Y atau  T) : ";cin>>x;
+		if(x=='Y'||x=='y'){
+				goto sini;
+			}
+		       else if(x=='T'||x=='t')
+		
+		sini:
+		cout<<"berapa personil arctic monkeys  ?"<<endl;
+		cin>>a;
+		switch ( a ==4){
+		     	case true:
+		cout << "YEAAAY KAMU BENAR, MEMANG KAMU INI FANS AM BANGETTT!!"<< endl;
+		cout << "SELAMAT KAMU DAPAT (KAOS BAND AM ALBUM PERTAMA WARNA	:"<<endl;
+		kaos.warna="HITAM";
+		cout << kaos.warna << endl;
+           
+
+	
+		
+		cout << "HADIAH BISA DI AMBIL DI KORIDOR STAGE SETELAH KONSER BERAKHIR, TERIMA KASIH"<<endl;
+		}
+		
+		cout<<"KEMBALI KE MENU AWAL (Y atau  T) : ";cin>>x;
+		if(x=='Y'||x=='y'){
+				goto pilihan;
+			}
+		       else if(x=='T'||x=='t')
+		       
+		       do{
+		       	cout << " TERIMA KASIH SUDAH BELANJA DI SINI"<<endl;
+			c++;
+		}while (c<5);
+
+			
+			return 0;
+
+
+}
